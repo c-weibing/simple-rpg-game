@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="***REMOVED***6s***REMOVED***>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="1***REMOVED***
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.MaterialCardView.RectangleItem"
+        app:strokeColor="@color/darkGrey"
+        app:strokeWidth="1***REMOVED***>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="***REMOVED***11s***REMOVED***
+            android:paddingTop="***REMOVED***10s***REMOVED***
+            android:paddingEnd="***REMOVED***11s***REMOVED***
+            android:paddingBottom="***REMOVED***10s***REMOVED***>
+
+            <TextView
+                android:id="@+id/inventoryItem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/aldrich"
+                android:text="inventoryItem"
+                android:textAlignment="textStart"
+                android:textColor="@color/lighterLightBlack"
+                android:textSize="***REMOVED***12s***REMOVED*** />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/inventoryItem"
+                app:layout_constraintEnd_toEndOf="@+id/inventoryItem"
+                app:layout_constraintTop_toTopOf="@+id/inventoryItem">
+
+                <ImageView
+                    android:id="@+id/inventoryItemIcon"
+                    android:layout_width="0***REMOVED***
+                    android:layout_height="0***REMOVED***
+                    android:src="@drawable/icon_minor_96"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/inventoryAmtTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="***REMOVED***6s***REMOVED***
+                    android:fontFamily="@font/aldrich"
+                    android:text="1 x"
+                    android:textSize="***REMOVED***12s***REMOVED***
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="@+id/inventoryItemIcon"
+                    app:layout_constraintEnd_toStartOf="@+id/inventoryItemIcon"
+                    app:layout_constraintTop_toTopOf="@+id/inventoryItemIcon" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <TextView
+                android:id="@+id/inventoryDescriptionTextView"
+                android:layout_width="0***REMOVED***
+                android:layout_height="wrap_content"
+                android:layout_marginTop="***REMOVED***6s***REMOVED***
+                android:layout_marginEnd="***REMOVED***6s***REMOVED***
+                android:fontFamily="@font/aldrich"
+                android:text="inventoryDescriptionTextView"
+                android:textAlignment="textStart"
+                android:textColor="@color/lighterLightBlack"
+                android:textSize="***REMOVED***10s***REMOVED***
+                app:layout_constraintEnd_toStartOf="@+id/useItemBtn"
+                app:layout_constraintStart_toStartOf="@+id/inventoryItem"
+                app:layout_constraintTop_toBottomOf="@+id/inventoryItem" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/useItemBtn"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="***REMOVED***18s***REMOVED***
+                android:fontFamily="@font/aldrich"
+                android:lines="1"
+                android:shadowRadius="5"
+                android:text="USE"
+                android:textSize="***REMOVED***10s***REMOVED***
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="@+id/inventoryItem"
+                app:layout_constraintTop_toTopOf="@+id/inventoryDescriptionTextView"
+                app:strokeWidth="2***REMOVED*** />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

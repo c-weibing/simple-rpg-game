@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="***REMOVED***6s***REMOVED***>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="1***REMOVED***
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.MaterialCardView.RectangleItem"
+        app:strokeColor="@color/darkGrey"
+        app:strokeWidth="1***REMOVED***>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="***REMOVED***11s***REMOVED***
+            android:paddingTop="***REMOVED***10s***REMOVED***
+            android:paddingEnd="***REMOVED***11s***REMOVED***
+            android:paddingBottom="***REMOVED***10s***REMOVED***>
+
+            <ProgressBar
+                android:id="@+id/achievementsProgressBar"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0***REMOVED***
+                android:layout_height="***REMOVED***10s***REMOVED***
+                android:layout_marginTop="***REMOVED***8s***REMOVED***
+                android:layout_marginEnd="***REMOVED***6s***REMOVED***
+                android:progress="50"
+                android:progressDrawable="@drawable/achievement_progress_bar"
+                app:layout_constraintEnd_toStartOf="@+id/constraintLayout11"
+                app:layout_constraintStart_toStartOf="@+id/achievementTitle"
+                app:layout_constraintTop_toBottomOf="@+id/achievementTitle" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout11"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/achievementsProgressBar"
+                app:layout_constraintEnd_toStartOf="@+id/claimReward"
+                app:layout_constraintTop_toTopOf="@+id/achievementsProgressBar">
+
+                <TextView
+                    android:id="@+id/achievementCurrentProgress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/aldrich"
+                    android:text="100"
+                    android:textSize="***REMOVED***11s***REMOVED***
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/aldrich"
+                    android:text=" / "
+                    android:textSize="***REMOVED***11s***REMOVED***
+                    app:layout_constraintBottom_toBottomOf="@+id/achievementCurrentProgress"
+                    app:layout_constraintStart_toEndOf="@+id/achievementCurrentProgress"
+                    app:layout_constraintTop_toTopOf="@+id/achievementCurrentProgress" />
+
+                <TextView
+                    android:id="@+id/achievementGoal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:fontFamily="@font/aldrich"
+                    android:text="100"
+                    android:textSize="***REMOVED***11s***REMOVED***
+                    app:layout_constraintBottom_toBottomOf="@+id/textView"
+                    app:layout_constraintStart_toEndOf="@+id/textView"
+                    app:layout_constraintTop_toTopOf="@+id/textView" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/inventoryItemIcon"
+                android:layout_width="0***REMOVED***
+                android:layout_height="0***REMOVED***
+                app:layout_constraintDimensionRatio="1"
+                android:src="@drawable/icon_attack_96"
+                app:layout_constraintBottom_toBottomOf="@+id/achievementTitle"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/achievementTitle" />
+
+            <TextView
+                android:id="@+id/achievementTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/aldrich"
+                android:text="Kill 5 Rats"
+                android:textAlignment="textStart"
+                android:textColor="@color/lighterLightBlack"
+                android:textSize="***REMOVED***12s***REMOVED***
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/claimReward"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginTop="***REMOVED***4s***REMOVED***
+                android:fontFamily="@font/aldrich"
+                android:lines="1"
+                android:shadowRadius="5"
+                android:text="CLAIM"
+                android:textSize="***REMOVED***10s***REMOVED***
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/constraintLayout11"
+                app:strokeWidth="2***REMOVED*** />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/buySellAmtConstraint"
+                android:layout_width="0***REMOVED***
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@+id/claimReward"
+                app:layout_constraintEnd_toStartOf="@+id/claimReward"
+                app:layout_constraintStart_toStartOf="@+id/achievementsProgressBar"
+                app:layout_constraintTop_toTopOf="@+id/claimReward">
+
+                <TextView
+                    android:id="@+id/achievementGoldReward"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="***REMOVED***6s***REMOVED***
+                    android:fontFamily="@font/aldrich"
+                    android:text="320g"
+                    android:textSize="***REMOVED***11s***REMOVED***
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/imageView"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="0***REMOVED***
+                    android:layout_height="0***REMOVED***
+                    app:layout_constraintDimensionRatio="1"
+                    android:contentDescription="@string/gold_image"
+                    android:src="@drawable/icon_coins_100"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

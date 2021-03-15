@@ -1,0 +1,584 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/playerCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="1***REMOVED***
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.MaterialCardView.TopBar"
+        app:strokeColor="@color/lightGrey"
+        app:strokeWidth="1***REMOVED***>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/playerLevelOuterCircle"
+                android:layout_width="0***REMOVED***
+                android:layout_height="0***REMOVED***
+                android:background="@drawable/player_level_outer_circle"
+                android:gravity="center"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintEnd_toStartOf="@+id/guideline4"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="0***REMOVED***
+                    android:layout_height="0***REMOVED***
+                    android:layout_margin="***REMOVED***5s***REMOVED***
+                    android:background="@drawable/player_level_inner_circle"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintDimensionRatio="1"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <ImageView
+                        android:id="@+id/greySword"
+                        android:layout_width="***REMOVED***27s***REMOVED***
+                        android:layout_height="***REMOVED***27s***REMOVED***
+                        android:layout_centerInParent="true"
+                        android:contentDescription="@string/grey_swords_in_battle_image"
+                        android:fontFamily="@font/aldrich"
+                        android:padding="***REMOVED***2s***REMOVED***
+                        android:src="@drawable/icon_attack_96"
+                        android:visibility="invisible"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="@+id/playerLevelInnerCircle"
+                        app:tint="@color/lightGrey" />
+
+                    <TextView
+                        android:id="@+id/playerLevelInnerCircle"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:autoSizeTextType="uniform"
+                        android:fontFamily="@font/aldrich"
+                        android:gravity="center"
+                        android:padding="***REMOVED***8s***REMOVED***
+                        android:text="1"
+                        android:textColor="@color/lighterLightBlack"
+                        android:textSize="***REMOVED***20s***REMOVED*** />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/constraintLayout10"
+                android:layout_width="0***REMOVED***
+                android:layout_height="wrap_content"
+                android:layout_marginStart="***REMOVED***6s***REMOVED***
+                android:layout_marginBottom="***REMOVED***18s***REMOVED***
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/guideline2"
+                app:layout_constraintStart_toStartOf="@+id/guideline4"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aldrich"
+                    android:text="HP"
+                    android:textSize="***REMOVED***10s***REMOVED***
+                    app:layout_constraintBottom_toTopOf="@+id/playerHpProgressBar"
+                    app:layout_constraintStart_toStartOf="@+id/playerHpProgressBar" />
+
+                <ProgressBar
+                    android:id="@+id/playerHpProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0***REMOVED***
+                    android:layout_height="0***REMOVED***
+                    android:progress="50"
+                    android:progressDrawable="@drawable/player_hp_bar"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHeight_percent="0.145"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+                <TextView
+                    android:id="@+id/playerHpTimer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="01 : 00"
+                    android:textSize="***REMOVED***8s***REMOVED***
+                    android:visibility="invisible"
+                    app:layout_constraintEnd_toEndOf="@+id/textView2"
+                    app:layout_constraintStart_toStartOf="@+id/textView2"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/playerCurrentHpTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aldrich"
+                    android:text="100"
+                    android:textSize="***REMOVED***10s***REMOVED***
+                    app:layout_constraintEnd_toStartOf="@+id/textView2"
+                    app:layout_constraintTop_toBottomOf="@+id/playerHpTimer" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aldrich"
+                    android:text=" / "
+                    android:textSize="***REMOVED***10s***REMOVED***
+                    app:layout_constraintEnd_toStartOf="@+id/playerMaxHpTextView"
+                    app:layout_constraintTop_toBottomOf="@+id/playerHpTimer" />
+
+                <TextView
+                    android:id="@+id/playerMaxHpTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aldrich"
+                    android:text="100"
+                    android:textSize="***REMOVED***10s***REMOVED***
+                    app:layout_constraintEnd_toEndOf="@+id/playerHpProgressBar"
+                    app:layout_constraintTop_toBottomOf="@+id/playerHpTimer" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aldrich"
+                    android:text="EXP"
+                    android:textSize="***REMOVED***10s***REMOVED***
+                    app:layout_constraintBottom_toTopOf="@+id/playerExpProgressBar"
+                    app:layout_constraintEnd_toStartOf="@+id/playerCurrentExpTextView"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@+id/playerExpProgressBar" />
+
+                <TextView
+                    android:id="@+id/playerCurrentExpTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aldrich"
+                    android:text="100"
+                    android:textSize="***REMOVED***10s***REMOVED***
+                    app:layout_constraintBottom_toTopOf="@+id/playerExpProgressBar"
+                    app:layout_constraintEnd_toStartOf="@+id/textView4" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aldrich"
+                    android:text=" / "
+                    android:textSize="***REMOVED***10s***REMOVED***
+                    app:layout_constraintBottom_toTopOf="@+id/playerExpProgressBar"
+                    app:layout_constraintEnd_toStartOf="@+id/playerMaxExpTextView" />
+
+                <TextView
+                    android:id="@+id/playerMaxExpTextView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/aldrich"
+                    android:text="50,000"
+                    android:textSize="***REMOVED***10s***REMOVED***
+                    app:layout_constraintBottom_toTopOf="@+id/playerExpProgressBar"
+                    app:layout_constraintEnd_toEndOf="@+id/playerExpProgressBar" />
+
+                <ProgressBar
+                    android:id="@+id/playerExpProgressBar"
+                    style="?android:attr/progressBarStyleHorizontal"
+                    android:layout_width="0***REMOVED***
+                    android:layout_height="0***REMOVED***
+                    android:layout_marginTop="***REMOVED***25s***REMOVED***
+                    android:progress="50"
+                    android:progressDrawable="@drawable/player_exp_bar"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@+id/playerHpProgressBar"
+                    app:layout_constraintHeight_percent="0.145"
+                    app:layout_constraintStart_toStartOf="@+id/playerHpProgressBar"
+                    app:layout_constraintTop_toBottomOf="@+id/playerHpProgressBar" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/imageView1"
+                android:layout_width="0***REMOVED***
+                android:layout_height="0***REMOVED***
+                android:layout_marginTop="***REMOVED***6s***REMOVED***
+                android:layout_marginEnd="***REMOVED***6s***REMOVED***
+                android:contentDescription="@string/attack_image"
+                android:fontFamily="@font/aldrich"
+                android:padding="***REMOVED***2s***REMOVED***
+                android:src="@drawable/icon_attack_96"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintEnd_toStartOf="@+id/playerAttackTextView"
+                app:layout_constraintStart_toStartOf="@+id/guideline3"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="0***REMOVED***
+                android:layout_height="0***REMOVED***
+                android:layout_marginTop="***REMOVED***6s***REMOVED***
+                android:layout_marginEnd="***REMOVED***6s***REMOVED***
+                android:contentDescription="@string/defense_image"
+                android:fontFamily="@font/aldrich"
+                android:padding="***REMOVED***2s***REMOVED***
+                android:src="@drawable/icon_defense_100"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintEnd_toStartOf="@+id/playerDefenseTextView"
+                app:layout_constraintStart_toStartOf="@+id/imageView1"
+                app:layout_constraintTop_toBottomOf="@+id/imageView1" />
+
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="0***REMOVED***
+                android:layout_height="0***REMOVED***
+                android:layout_marginTop="***REMOVED***6s***REMOVED***
+                android:layout_marginEnd="***REMOVED***6s***REMOVED***
+                android:contentDescription="@string/gold_image"
+                android:fontFamily="@font/aldrich"
+                android:padding="***REMOVED***2s***REMOVED***
+                android:src="@drawable/icon_coins_100"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintEnd_toStartOf="@+id/playerGoldTextView"
+                app:layout_constraintStart_toStartOf="@+id/imageView2"
+                app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+            <TextView
+                android:id="@+id/playerAttackTextView"
+                android:layout_width="0***REMOVED***
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:text="0"
+                android:textSize="***REMOVED***10s***REMOVED***
+                app:layout_constraintBottom_toBottomOf="@+id/imageView1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline1"
+                app:layout_constraintTop_toTopOf="@+id/imageView1" />
+
+            <TextView
+                android:id="@+id/playerDefenseTextView"
+                android:layout_width="0***REMOVED***
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:text="0"
+                android:textSize="***REMOVED***10s***REMOVED***
+                app:layout_constraintBottom_toBottomOf="@+id/imageView2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline1"
+                app:layout_constraintTop_toTopOf="@+id/imageView2" />
+
+            <TextView
+                android:id="@+id/playerGoldTextView"
+                android:layout_width="0***REMOVED***
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:text="0"
+                android:textSize="***REMOVED***10s***REMOVED***
+                app:layout_constraintBottom_toBottomOf="@+id/imageView3"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/guideline1"
+                app:layout_constraintTop_toTopOf="@+id/imageView3" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.79846936" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.6" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.70" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.17" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout1"
+        android:layout_width="0***REMOVED***
+        android:layout_height="0***REMOVED***
+        android:layout_marginTop="***REMOVED***12s***REMOVED***
+        android:layout_marginBottom="***REMOVED***6s***REMOVED***
+        app:layout_constraintBottom_toTopOf="@+id/constraintLayout2"
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintHeight_percent="0.08"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/playerCardView">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/backBtn"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0***REMOVED***
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aldrich"
+            android:padding="0***REMOVED***
+            app:icon="@drawable/ic_left_arrow"
+            app:iconGravity="textStart"
+            app:iconPadding="0***REMOVED***
+            app:iconSize="***REMOVED***18s***REMOVED***
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.25" />
+
+        <TextView
+            android:id="@+id/menuTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aldrich"
+            android:text="MENU"
+            android:textColor="@color/lighterLightBlack"
+            android:textSize="***REMOVED***20s***REMOVED***
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout2"
+        android:layout_width="0***REMOVED***
+        android:layout_height="wrap_content"
+        android:layout_marginTop="***REMOVED***6s***REMOVED***
+        android:background="@drawable/grey_border"
+        android:paddingTop="***REMOVED***12s***REMOVED***
+        android:paddingBottom="***REMOVED***12s***REMOVED***
+        app:layout_constraintEnd_toStartOf="@+id/guideline6"
+        app:layout_constraintStart_toStartOf="@+id/guideline5"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout1">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/menuEquipmentBtn"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0***REMOVED***
+            android:layout_height="0***REMOVED***
+            app:icon="@drawable/icon_equipment_96"
+            app:iconGravity="textStart"
+            app:iconPadding="0***REMOVED***
+            app:iconSize="***REMOVED***34s***REMOVED***
+            app:iconTint="@null"
+            app:layout_constraintBottom_toTopOf="@+id/menuInventoryTextView"
+            app:layout_constraintDimensionRatio="0.9"
+            app:layout_constraintEnd_toStartOf="@+id/menuInventoryBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/menuInventoryBtn"
+            app:layout_constraintWidth_percent="0.24"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.MaterialButton.RectangleItem"
+            app:strokeColor="@color/colorPrimaryDarkOpacity" />
+
+        <TextView
+            android:id="@+id/menuEquipmentTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aldrich"
+            android:text="EQUIPMENT"
+            android:textAlignment="center"
+            android:textSize="***REMOVED***10s***REMOVED***
+            app:layout_constraintEnd_toEndOf="@+id/menuEquipmentBtn"
+            app:layout_constraintStart_toStartOf="@+id/menuEquipmentBtn"
+            app:layout_constraintTop_toBottomOf="@+id/menuEquipmentBtn" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/menuAchievementsBtn"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0***REMOVED***
+            android:layout_height="0***REMOVED***
+            app:icon="@drawable/icon_trophy_96"
+            app:iconGravity="textStart"
+            app:iconPadding="0***REMOVED***
+            app:iconSize="***REMOVED***34s***REMOVED***
+            app:iconTint="@null"
+            app:layout_constraintBottom_toBottomOf="@+id/menuInventoryBtn"
+            app:layout_constraintDimensionRatio="0.9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/menuInventoryBtn"
+            app:layout_constraintTop_toTopOf="@+id/menuInventoryBtn"
+            app:layout_constraintWidth_percent="0.24"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.MaterialButton.RectangleItem"
+            app:strokeColor="@color/colorPrimaryDarkOpacity" />
+
+        <TextView
+            android:id="@+id/menuAchievementsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aldrich"
+            android:text="ACHIEVEMENTS"
+            android:textAlignment="center"
+            android:textSize="***REMOVED***10s***REMOVED***
+            app:layout_constraintEnd_toEndOf="@+id/menuAchievementsBtn"
+            app:layout_constraintStart_toStartOf="@+id/menuAchievementsBtn"
+            app:layout_constraintTop_toBottomOf="@+id/menuAchievementsBtn" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/menuInventoryBtn"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0***REMOVED***
+            android:layout_height="0***REMOVED***
+            app:icon="@drawable/icon_rucksack_96"
+            app:iconGravity="textStart"
+            app:iconPadding="0***REMOVED***
+            app:iconSize="***REMOVED***34s***REMOVED***
+            app:iconTint="@null"
+            app:layout_constraintDimensionRatio="0.9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintWidth_percent="0.24"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.MaterialButton.RectangleItem"
+            app:strokeColor="@color/colorPrimaryDarkOpacity" />
+
+        <TextView
+            android:id="@+id/menuInventoryTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aldrich"
+            android:text="INVENTORY"
+            android:textAlignment="center"
+            android:textSize="***REMOVED***10s***REMOVED***
+            app:layout_constraintEnd_toEndOf="@+id/menuInventoryBtn"
+            app:layout_constraintStart_toStartOf="@+id/menuInventoryBtn"
+            app:layout_constraintTop_toBottomOf="@+id/menuInventoryBtn" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/menuShopBtn"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0***REMOVED***
+            android:layout_height="0***REMOVED***
+            app:icon="@drawable/icon_shop_96"
+            app:iconGravity="textStart"
+            app:iconPadding="0***REMOVED***
+            app:iconSize="***REMOVED***34s***REMOVED***
+            app:iconTint="@null"
+            app:layout_constraintBottom_toTopOf="@+id/menuSettingsTextView"
+            app:layout_constraintDimensionRatio="0.9"
+            app:layout_constraintEnd_toStartOf="@+id/menuSettingsBtn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/menuSettingsBtn"
+            app:layout_constraintWidth_percent="0.24"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.MaterialButton.RectangleItem"
+            app:strokeColor="@color/colorPrimaryDarkOpacity" />
+
+        <TextView
+            android:id="@+id/menuShopTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aldrich"
+            android:text="SHOP"
+            android:textAlignment="center"
+            android:textSize="***REMOVED***10s***REMOVED***
+            app:layout_constraintEnd_toEndOf="@+id/menuShopBtn"
+            app:layout_constraintStart_toStartOf="@+id/menuShopBtn"
+            app:layout_constraintTop_toBottomOf="@+id/menuShopBtn" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/menuSettingsBtn"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0***REMOVED***
+            android:layout_height="0***REMOVED***
+            android:layout_marginTop="***REMOVED***18s***REMOVED***
+            app:icon="@drawable/icon_settings_96"
+            app:iconGravity="textStart"
+            app:iconPadding="0***REMOVED***
+            app:iconSize="***REMOVED***34s***REMOVED***
+            app:iconTint="@null"
+            app:layout_constraintDimensionRatio="0.9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/menuInventoryTextView"
+            app:layout_constraintWidth_percent="0.24"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.MaterialButton.RectangleItem"
+            app:strokeColor="@color/colorPrimaryDarkOpacity" />
+
+        <TextView
+            android:id="@+id/menuSettingsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aldrich"
+            android:text="SETTINGS"
+            android:textAlignment="center"
+            android:textSize="***REMOVED***10s***REMOVED***
+            app:layout_constraintEnd_toEndOf="@+id/menuSettingsBtn"
+            app:layout_constraintStart_toStartOf="@+id/menuSettingsBtn"
+            app:layout_constraintTop_toBottomOf="@+id/menuSettingsBtn" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/menuAboutBtn"
+            style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+            android:layout_width="0***REMOVED***
+            android:layout_height="0***REMOVED***
+            app:icon="@drawable/icon_about_96"
+            app:iconGravity="textStart"
+            app:iconPadding="0***REMOVED***
+            app:iconSize="***REMOVED***34s***REMOVED***
+            app:iconTint="@null"
+            app:layout_constraintBottom_toTopOf="@+id/menuSettingsTextView"
+            app:layout_constraintDimensionRatio="0.9"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/menuSettingsBtn"
+            app:layout_constraintTop_toTopOf="@+id/menuSettingsBtn"
+            app:layout_constraintWidth_percent="0.24"
+            app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.MaterialButton.RectangleItem"
+            app:strokeColor="@color/colorPrimaryDarkOpacity" />
+
+        <TextView
+            android:id="@+id/menuAboutTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/aldrich"
+            android:text="ABOUT"
+            android:textAlignment="center"
+            android:textSize="***REMOVED***10s***REMOVED***
+            app:layout_constraintEnd_toEndOf="@+id/menuAboutBtn"
+            app:layout_constraintStart_toStartOf="@+id/menuAboutBtn"
+            app:layout_constraintTop_toBottomOf="@+id/menuAboutBtn" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline6"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.card.MaterialCardView xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="***REMOVED***8s***REMOVED***
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        app:cardElevation="1***REMOVED***
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.MaterialCardView.MapItem"
+        app:strokeColor="@color/lightGrey"
+        app:strokeWidth="1***REMOVED***>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/mapBackgroundSelectable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="***REMOVED***11s***REMOVED***
+            android:paddingTop="***REMOVED***11s***REMOVED***
+            android:paddingEnd="***REMOVED***11s***REMOVED***
+            android:paddingBottom="***REMOVED***11s***REMOVED***>
+
+            <TextView
+                android:id="@+id/mapItem"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fontFamily="@font/aldrich"
+                android:text="mapItem"
+                android:textAlignment="center"
+                android:textColor="@color/colorPrimary"
+                android:textSize="***REMOVED***14s***REMOVED*** />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+</FrameLayout>

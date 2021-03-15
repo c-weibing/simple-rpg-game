@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SettingsActivity">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/currentMenuOptionCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="1***REMOVED***
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/ShapeAppearanceOverlay.MyApp.MaterialCardView.EquipmentTopBar"
+        app:strokeColor="@color/lightGrey"
+        app:strokeWidth="1***REMOVED***>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="***REMOVED***2s***REMOVED***>
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="0***REMOVED***
+                android:layout_height="0***REMOVED***
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/back_button"
+                android:focusable="true"
+                android:padding="***REMOVED***2s***REMOVED***
+                android:src="@drawable/ic_arrow_back"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintEnd_toStartOf="@+id/guideline5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/currentMenuOptionTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/aldrich"
+                android:text="SETTINGS"
+                android:textSize="***REMOVED***20s***REMOVED***
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/homeBtn"
+                android:layout_width="0***REMOVED***
+                android:layout_height="0***REMOVED***
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:clickable="true"
+                android:contentDescription="@string/home_button"
+                android:focusable="true"
+                android:padding="***REMOVED***2s***REMOVED***
+                android:src="@drawable/ic_home"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintDimensionRatio="1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="@+id/guideline6"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline5"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.09" />
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/guideline6"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:layout_constraintGuide_percent="0.91" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="0***REMOVED***
+        android:layout_height="0***REMOVED***
+        android:layout_marginTop="***REMOVED***15s***REMOVED***
+        android:layout_marginBottom="***REMOVED***15s***REMOVED***
+        android:background="@drawable/grey_border"
+        android:overScrollMode="never"
+        android:paddingTop="***REMOVED***8s***REMOVED***
+        android:paddingBottom="***REMOVED***8s***REMOVED***
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline8"
+        app:layout_constraintStart_toStartOf="@+id/guideline7"
+        app:layout_constraintTop_toBottomOf="@+id/currentMenuOptionCardView">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/noInventoryText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="parent">
+
+            <TextView
+                android:id="@+id/eventsTitle"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0***REMOVED***
+                android:layout_height="wrap_content"
+                android:layout_marginStart="***REMOVED***15s***REMOVED***
+                android:layout_marginEnd="***REMOVED***15s***REMOVED***
+                android:paddingStart="0***REMOVED***
+                android:paddingEnd="0***REMOVED***
+                android:text="Events"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="***REMOVED***15s***REMOVED***
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/settingsEventRecycler"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/eventsTitle" />
+
+            <TextView
+                android:id="@+id/greyLine"
+                android:layout_width="match_parent"
+                android:layout_height="0***REMOVED***
+                app:layout_constraintHeight_percent="0.01"
+                android:layout_marginStart="***REMOVED***12s***REMOVED***
+                android:layout_marginTop="***REMOVED***6s***REMOVED***
+                android:layout_marginEnd="***REMOVED***12s***REMOVED***
+                android:background="@drawable/bottom_grey_line"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/settingsEventRecycler" />
+
+            <TextView
+                android:id="@+id/resetTitle"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton"
+                android:layout_width="0***REMOVED***
+                android:layout_height="wrap_content"
+                android:layout_marginStart="***REMOVED***15s***REMOVED***
+                android:layout_marginTop="***REMOVED***12s***REMOVED***
+                android:layout_marginEnd="***REMOVED***15s***REMOVED***
+                android:paddingStart="0***REMOVED***
+                android:paddingEnd="0***REMOVED***
+                android:text="Reset"
+                android:textAlignment="textStart"
+                android:textAllCaps="false"
+                android:textSize="***REMOVED***15s***REMOVED***
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/greyLine" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/resetSettingsLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="***REMOVED***6s***REMOVED***
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingLeft="***REMOVED***15s***REMOVED***
+                android:paddingTop="***REMOVED***6s***REMOVED***
+                android:paddingRight="***REMOVED***15s***REMOVED***
+                android:paddingBottom="***REMOVED***6s***REMOVED***
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/resetTitle">
+
+                <TextView
+                    android:id="@+id/resetSettingsTitle"
+                    android:layout_width="0***REMOVED***
+                    android:layout_height="wrap_content"
+                    android:text="Reset Settings"
+                    android:textColor="@color/lighterBlack"
+                    android:textSize="***REMOVED***12s***REMOVED***
+                    app:layout_constraintBottom_toTopOf="@+id/resetSettingsDescription"
+                    app:layout_constraintEnd_toEndOf="@+id/resetSettingsDescription"
+                    app:layout_constraintStart_toStartOf="@+id/resetSettingsDescription" />
+
+                <TextView
+                    android:id="@+id/resetSettingsDescription"
+                    android:layout_width="0***REMOVED***
+                    android:layout_height="wrap_content"
+                    android:text="Reset all settings to their default"
+                    android:textColor="@color/grey"
+                    android:textSize="***REMOVED***11s***REMOVED***
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/resetSettingsTitle" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/resetDataLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="***REMOVED***6s***REMOVED***
+                android:layout_marginBottom="***REMOVED***18s***REMOVED***
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingLeft="***REMOVED***15s***REMOVED***
+                android:paddingTop="***REMOVED***6s***REMOVED***
+                android:paddingRight="***REMOVED***15s***REMOVED***
+                android:paddingBottom="***REMOVED***6s***REMOVED***
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/resetSettingsLayout">
+
+                <TextView
+                    android:id="@+id/settingsTitle"
+                    android:layout_width="0***REMOVED***
+                    android:layout_height="wrap_content"
+                    android:text="Reset Data"
+                    android:textColor="@color/red"
+                    android:textSize="***REMOVED***12s***REMOVED***
+                    app:layout_constraintBottom_toTopOf="@+id/settingsDescription"
+                    app:layout_constraintEnd_toEndOf="@+id/settingsDescription"
+                    app:layout_constraintStart_toStartOf="@+id/settingsDescription" />
+
+                <TextView
+                    android:id="@+id/settingsDescription"
+                    android:layout_width="0***REMOVED***
+                    android:layout_height="wrap_content"
+                    android:text="You will lose all game progress"
+                    android:textColor="@color/grey"
+                    android:textSize="***REMOVED***11s***REMOVED***
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/settingsTitle" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.03" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.97" />
+</androidx.constraintlayout.widget.ConstraintLayout>

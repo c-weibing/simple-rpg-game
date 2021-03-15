@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="***REMOVED***15s***REMOVED***
+    android:soundEffectsEnabled="false">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/aldrich"
+        android:letterSpacing="0.1"
+        android:paddingStart="***REMOVED***16s***REMOVED***
+        android:paddingEnd="***REMOVED***16s***REMOVED***
+        android:paddingBottom="0***REMOVED***
+        android:text="Title"
+        android:textAlignment="textStart"
+        android:textColor="@color/lighterLightBlack"
+        android:textSize="***REMOVED***18s***REMOVED***
+        android:textStyle="bold" />
+</RelativeLayout>

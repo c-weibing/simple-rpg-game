@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/clickableLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="***REMOVED***6s***REMOVED***
+    android:background="?android:attr/selectableItemBackground"
+    android:clickable="true"
+    android:focusable="true"
+    android:paddingLeft="***REMOVED***15s***REMOVED***
+    android:paddingTop="***REMOVED***6s***REMOVED***
+    android:paddingRight="***REMOVED***15s***REMOVED***
+    android:paddingBottom="***REMOVED***6s***REMOVED***>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutTitleAndDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/settingsTitle"
+            android:layout_width="0***REMOVED***
+            android:layout_height="wrap_content"
+            android:text="settingsTitle"
+            android:textColor="@color/lighterBlack"
+            android:textSize="***REMOVED***12s***REMOVED***
+            app:layout_constraintBottom_toTopOf="@+id/settingsDescription"
+            app:layout_constraintEnd_toEndOf="@+id/settingsDescription"
+            app:layout_constraintStart_toStartOf="@+id/settingsDescription" />
+
+        <TextView
+            android:id="@+id/settingsDescription"
+            android:layout_width="0***REMOVED***
+            android:layout_height="wrap_content"
+            android:text="settingsDescription"
+            android:textColor="@color/grey"
+            android:textSize="***REMOVED***11s***REMOVED***
+            app:layout_constraintEnd_toStartOf="@+id/constraintLayout8"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/settingsTitle" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/settingsDescription"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/settingsTitle">
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/settingsSwitch"
+                style="@style/Widget.App.Switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:clickable="false"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/settingsColor"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:layout_width="***REMOVED***27s***REMOVED***
+                android:layout_height="***REMOVED***27s***REMOVED***
+                android:backgroundTint="@color/transparent"
+                android:clickable="false"
+                android:elevation="0***REMOVED***
+                android:insetLeft="0***REMOVED***
+                android:insetTop="0***REMOVED***
+                android:insetRight="0***REMOVED***
+                android:insetBottom="0***REMOVED***
+                android:padding="0***REMOVED***
+                app:cornerRadius="8***REMOVED***
+                app:iconGravity="textStart"
+                app:iconPadding="0***REMOVED***
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeWidth="2***REMOVED*** />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutTitleOnly"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/settingsTitleOnly"
+            android:layout_width="0***REMOVED***
+            android:layout_height="wrap_content"
+            android:text="settingsTitleOnly"
+            android:textColor="@color/lighterBlack"
+            android:textSize="***REMOVED***12s***REMOVED***
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/constraintLayout9"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/constraintLayout9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="@+id/settingsTitleOnly"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/settingsTitleOnly">
+
+            <com.google.android.material.switchmaterial.SwitchMaterial
+                android:id="@+id/settingsSwitchOnly"
+                style="@style/Widget.App.Switch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:clickable="false"
+                android:visibility="invisible"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/settingsColorOnly"
+                style="@style/Widget.MaterialComponents.Button.OutlinedButton.Icon"
+                android:layout_width="***REMOVED***27s***REMOVED***
+                android:layout_height="***REMOVED***27s***REMOVED***
+                android:backgroundTint="@color/transparent"
+                android:clickable="false"
+                android:elevation="0***REMOVED***
+                android:insetLeft="0***REMOVED***
+                android:insetTop="0***REMOVED***
+                android:insetRight="0***REMOVED***
+                android:insetBottom="0***REMOVED***
+                android:padding="0***REMOVED***
+                app:cornerRadius="8***REMOVED***
+                app:iconGravity="textStart"
+                app:iconPadding="0***REMOVED***
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:strokeWidth="2***REMOVED*** />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

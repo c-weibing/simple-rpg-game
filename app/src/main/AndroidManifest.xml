@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.wb.simplerpggame">
+
+    <compatible-screens>
+        <!-- all normal size screens -->
+        <screen android:screenSize="normal" android:screenDensity="xhdpi" />
+        <screen android:screenSize="normal" android:screenDensity="xxhdpi" />
+        <screen android:screenSize="normal" android:screenDensity="xxxhdpi" />
+
+        <!-- all large size screens -->
+        <screen android:screenSize="large" android:screenDensity="hdpi" />
+        <screen android:screenSize="large" android:screenDensity="xhdpi" />
+        <screen android:screenSize="large" android:screenDensity="xxhdpi" />
+        <screen android:screenSize="large" android:screenDensity="xxxhdpi" />
+    </compatible-screens>
+
+    <supports-screens
+        android:smallScreens="false"
+        android:normalScreens="true"
+        android:largeScreens="true"
+        android:xlargeScreens="false" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.wb.simplerpggame.SettingsActivity"/>
+        <activity
+            android:name="com.wb.simplerpggame.AchievementsActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.wb.simplerpggame.ShopActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.wb.simplerpggame.MenuActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.wb.simplerpggame.InventoryActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.wb.simplerpggame.EquipmentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.wb.simplerpggame.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>

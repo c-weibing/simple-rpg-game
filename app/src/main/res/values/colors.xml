@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+
+    <color name="lighterLightBlack">#606060</color>
+    <color name="lighterBlack">#424242</color>
+
+    <color name="lightGrey">#E7E7E7</color>
+    <color name="darkGrey">#DFDFDF</color>
+    <color name="grey">#A8A8A8</color>
+    <color name="transparent">#00FFFFFF</color>
+
+    <!--  hp and exp bar colours -->
+    <color name="red">#ff4d4d</color>
+    <color name="yellow">#FFCE4D</color>
+
+    <!--  progress bar -->
+    <color name="blue">#4D5FFF</color>
+
+    <color name="primaryOpacity">#1F6200EE</color>
+    <color name="white">#FFFFFF</color>
+
+    <color name="colorPrimaryDarkOpacity">#263700B3</color>
+
+    <!--    color picker colors-->
+    <color name="colorPick1">#FDFDFD</color>
+    <color name="colorPick2">#FFDEDE</color>
+    <color name="colorPick3">#FFE8DD</color>
+    <color name="colorPick4">#FFFADC</color>
+    <color name="colorPick5">#DBFFDD</color>
+    <color name="colorPick6">#DDE1FF</color>
+    <color name="colorPick7">#EDDCFF</color>
+    <color name="colorPick8">#F2F2F2</color>
+</resources>

@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">simplerpggame</string>
+
+<!--    Content Descriptions-->
+    <string name="grey_swords_in_battle_image">Grey Swords In-Battle Image</string>
+    <string name="back_button">Back Button</string>
+    <string name="home_button">Home Button</string>
+    <string name="attack_image">Attack Image</string>
+    <string name="defense_image">Defense Image</string>
+    <string name="gold_image">Gold Image</string>
+    <string name="equipped_image">Equipped Image</string>
+    <string name="expand_event_button">Expand Event Button</string>
+    <string name="minimize_event_button">Minimize Event Button</string>
+</resources>
