@@ -34,6 +34,7 @@ Fight monsters, explore different maps, farm for gold and items, complete achiev
     <th colspan="3"><a href="https://github.com/***REMOVED***/simple-rpg-game/blob/master/app/src/main/java/com/wb/simplerpggame/MenuActivity.java">MenuActivity.java</a></td>
   </tr>
 </table>
+<br/>
 <table style="width:100%">
   <tr>
     <th colspan="3">Equipment</th>
