@@ -1,5 +1,4 @@
 # simple-rpg-game
-Simple RPG Game
 
 Fight monsters, explore different maps, farm for gold and items, complete achievements and reach level 50!
 
