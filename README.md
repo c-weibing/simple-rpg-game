@@ -1,9 +1,7 @@
 # simple-rpg-game
-***REMOVED***
+Simple RPG Game
 
 Fight monsters, explore different maps, farm for gold and items, complete achievements and reach level 50!
-
-<a href="https://github.com/***REMOVED***/simple-rpg-game/tree/master/app/src/main/java/com/wb/simplerpggame">simple-rpg-game/app/src/main/java/com/wb/simplerpggame/</a>
 
 #### Screenshots of project over time
 
