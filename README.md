@@ -1,6 +1,7 @@
 # simple-rpg-game
 
 Fight monsters, explore different maps, farm for gold and items, complete achievements and reach level 50!
+Note: This project is outdated.
 
 #### Screenshots of project over time
 
